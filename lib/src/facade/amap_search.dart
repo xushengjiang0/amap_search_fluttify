@@ -254,7 +254,7 @@ mixin _Community on _Holder {
         final query = await com_amap_api_services_help_InputtipsQuery
             .create__String__String(keyword, city);
         // 限制在当前城市
-        await query.setCityLimit(true);
+        await query.setCityLimit(false);
 
         // 获取android上下文
         final context = await android_app_Activity.get();
